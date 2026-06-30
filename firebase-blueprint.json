@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile settings and preference flags.",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "avatarUrl": { "type": "string" },
+        "timezone": { "type": "string" },
+        "streakCount": { "type": "integer" },
+        "pilotPersona": { "type": "string" },
+        "weeklyFocusGoal": { "type": "integer" }
+      },
+      "required": ["name", "email", "timezone"]
+    },
+    "TasksDocument": {
+      "title": "TasksDocument",
+      "description": "The complete tasks array for a user.",
+      "type": "object",
+      "properties": {
+        "tasks": {
+          "type": "array"
+        }
+      },
+      "required": ["tasks"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "Personalized user settings."
+    },
+    "/tasks/{userId}": {
+      "schema": "TasksDocument",
+      "description": "User's complete tasks list."
+    }
+  }
+}

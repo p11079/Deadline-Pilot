@@ -1,0 +1,6 @@
+{
+  "name": "DeadlinePilot",
+  "description": "An AI-powered productivity companion that proactively helps users complete tasks before deadlines instead of simply reminding them.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
